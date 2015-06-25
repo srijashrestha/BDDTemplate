@@ -55,7 +55,6 @@
 							<goal>test</goal>
 						</goals>
 						<configuration>
-							<outputEncoding>${project.build.sourceEncoding}</outputEncoding>
 							<includes>
 								<include>/RunTest.java</include>
 							</includes>
