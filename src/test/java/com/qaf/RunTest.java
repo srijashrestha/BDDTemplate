@@ -10,8 +10,10 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/resources",
 		plugin = {"pretty", "html:target/cucumber-reports/html", "json:target/cucumber.json"},
 		glue = "com.qaf.stepdefinitions",
-		tags = {}
+		tags = {"@runTheTest"}
 		)
+
+
 public class RunTest {
 
 }
