@@ -60,8 +60,8 @@ public class TestAppSteps {
         driver.findElement(By.id("Email")).sendKeys("kaplantesters");
     }
 
-    @When("^I click the Next button$")
-    public void i_click_the_Next_button() throws Throwable {
+    @When("^I click the Next$")
+    public void i_click_the_Next() throws Throwable {
         driver.findElement(By.id("next")).click();
     }
 
@@ -70,8 +70,8 @@ public class TestAppSteps {
         driver.findElement(By.id("Passwd")).sendKeys("Kaplan2015");
     }
 
-    @When("^I click on Sign In button$")
-    public void i_click_on_Sign_In_button() throws Throwable {
+    @When("^I click on Sign In$")
+    public void i_click_on_Sign_In() throws Throwable {
         driver.findElement(By.id("signIn")).click();
     }
 
@@ -80,7 +80,7 @@ public class TestAppSteps {
         Assert.assertEquals("Please enter your email.", driver.findElement(By.id("errormsg_0_Email")).getText());
 
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("target/loginFailScreenShot.png"));
+        FileUtils.copyFile(scrFile, new File("target/" + browser + "loginFailScreenShot.png"));
     }
 
     @Then("^I should be see 'kaplantesters@gmail\\.com'$")
