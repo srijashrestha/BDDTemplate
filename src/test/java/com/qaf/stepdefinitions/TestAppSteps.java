@@ -47,7 +47,8 @@ public class TestAppSteps {
     public void i_navigate_to_Gmail_site(String browserName) throws Throwable {
        browser=browserName;
         getDriver().get("https://www.gmail.com");
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
     }
 
     @Then("^I should see the message 'Sign in to continue to Gmail'$")
@@ -87,6 +88,7 @@ public class TestAppSteps {
     public void i_should_be_see_kaplantesters_gmail_com() throws Throwable {
         Assert.assertEquals("kaplantesters@gmail.com",
                 driver.findElement(By.xpath("//a[contains(@class,'gb_ga gb_l gb_r gb_h')]")).getText());
+
     }
 
     @Then("^I should be able to SignOut$")
